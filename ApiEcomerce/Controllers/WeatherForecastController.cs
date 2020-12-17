@@ -36,11 +36,5 @@ namespace ApiEcomerce.Controllers
             })
             .ToArray();
         }
-
-        [HttpGet]
-        public IEnumerable<Article> Articles()
-        {
-            return null;
-        }
     }
 }

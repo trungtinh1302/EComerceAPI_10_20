@@ -1,14 +1,14 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ApiEcomerce.Model.Data.Migrations
+namespace ApiEcomerce.Models.Data.Migrations
 {
-    public partial class InitMydatabase : Migration
+    public partial class UpdateDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AccountCategories",
+                name: "AccountCategory",
                 columns: table => new
                 {
                     AccountCategoryID = table.Column<int>(nullable: false)
@@ -22,11 +22,11 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AccountCategories", x => x.AccountCategoryID);
+                    table.PrimaryKey("PK_AccountCategory", x => x.AccountCategoryID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ArticleMainCategories",
+                name: "ArticleMainCategory",
                 columns: table => new
                 {
                     ArticleMainCategoryID = table.Column<int>(nullable: false)
@@ -43,11 +43,11 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ArticleMainCategories", x => x.ArticleMainCategoryID);
+                    table.PrimaryKey("PK_ArticleMainCategory", x => x.ArticleMainCategoryID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ContactCategories",
+                name: "ContactCategory",
                 columns: table => new
                 {
                     ContactCategoryID = table.Column<int>(nullable: false)
@@ -64,11 +64,11 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ContactCategories", x => x.ContactCategoryID);
+                    table.PrimaryKey("PK_ContactCategory", x => x.ContactCategoryID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductMainCategories",
+                name: "ProductMainCategory",
                 columns: table => new
                 {
                     ProductMainCategoryID = table.Column<int>(nullable: false)
@@ -85,11 +85,11 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductMainCategories", x => x.ProductMainCategoryID);
+                    table.PrimaryKey("PK_ProductMainCategory", x => x.ProductMainCategoryID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Accounts",
+                name: "Account",
                 columns: table => new
                 {
                     AccountID = table.Column<int>(nullable: false)
@@ -109,17 +109,17 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Accounts", x => x.AccountID);
+                    table.PrimaryKey("PK_Account", x => x.AccountID);
                     table.ForeignKey(
-                        name: "FK_Accounts_AccountCategories_AccountCategoryID",
+                        name: "FK_Account_AccountCategory_AccountCategoryID",
                         column: x => x.AccountCategoryID,
-                        principalTable: "AccountCategories",
+                        principalTable: "AccountCategory",
                         principalColumn: "AccountCategoryID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ArticleCategories",
+                name: "ArticleCategory",
                 columns: table => new
                 {
                     ArticleCategoryID = table.Column<int>(nullable: false)
@@ -137,17 +137,17 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ArticleCategories", x => x.ArticleCategoryID);
+                    table.PrimaryKey("PK_ArticleCategory", x => x.ArticleCategoryID);
                     table.ForeignKey(
-                        name: "FK_ArticleCategories_ArticleMainCategories_ArticleMainCategoryID",
+                        name: "FK_ArticleCategory_ArticleMainCategory_ArticleMainCategoryID",
                         column: x => x.ArticleMainCategoryID,
-                        principalTable: "ArticleMainCategories",
+                        principalTable: "ArticleMainCategory",
                         principalColumn: "ArticleMainCategoryID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Contacts",
+                name: "Contact",
                 columns: table => new
                 {
                     ContactID = table.Column<int>(nullable: false)
@@ -166,17 +166,17 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Contacts", x => x.ContactID);
+                    table.PrimaryKey("PK_Contact", x => x.ContactID);
                     table.ForeignKey(
-                        name: "FK_Contacts_ContactCategories_ContactCategoryID",
+                        name: "FK_Contact_ContactCategory_ContactCategoryID",
                         column: x => x.ContactCategoryID,
-                        principalTable: "ContactCategories",
+                        principalTable: "ContactCategory",
                         principalColumn: "ContactCategoryID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductCategories",
+                name: "ProductCategory",
                 columns: table => new
                 {
                     ProductCategoryID = table.Column<int>(nullable: false)
@@ -194,17 +194,17 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductCategories", x => x.ProductCategoryID);
+                    table.PrimaryKey("PK_ProductCategory", x => x.ProductCategoryID);
                     table.ForeignKey(
-                        name: "FK_ProductCategories_ProductMainCategories_ProductMainCategoryID",
+                        name: "FK_ProductCategory_ProductMainCategory_ProductMainCategoryID",
                         column: x => x.ProductMainCategoryID,
-                        principalTable: "ProductMainCategories",
+                        principalTable: "ProductMainCategory",
                         principalColumn: "ProductMainCategoryID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Articles",
+                name: "Article",
                 columns: table => new
                 {
                     ArticleID = table.Column<int>(nullable: false)
@@ -228,17 +228,17 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Articles", x => x.ArticleID);
+                    table.PrimaryKey("PK_Article", x => x.ArticleID);
                     table.ForeignKey(
-                        name: "FK_Articles_ArticleCategories_ArticleCategoryID",
+                        name: "FK_Article_ArticleCategory_ArticleCategoryID",
                         column: x => x.ArticleCategoryID,
-                        principalTable: "ArticleCategories",
+                        principalTable: "ArticleCategory",
                         principalColumn: "ArticleCategoryID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Products",
+                name: "Product",
                 columns: table => new
                 {
                     ProductID = table.Column<int>(nullable: false)
@@ -271,77 +271,98 @@ namespace ApiEcomerce.Model.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.ProductID);
+                    table.PrimaryKey("PK_Product", x => x.ProductID);
                     table.ForeignKey(
-                        name: "FK_Products_ProductCategories_ProductCategoryID",
+                        name: "FK_Product_ProductCategory_ProductCategoryID",
                         column: x => x.ProductCategoryID,
-                        principalTable: "ProductCategories",
+                        principalTable: "ProductCategory",
                         principalColumn: "ProductCategoryID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "AccountCategory",
+                columns: new[] { "AccountCategoryID", "Avatar", "Description", "Position", "Status", "Thumb", "Title" },
+                values: new object[,]
+                {
+                    { 1, null, "Tài khoản khách hàng 1", 1, true, null, "Client Account 1" },
+                    { 2, null, "Tài khoản khách hàng 2", 1, true, null, "Client Account 2" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "ProductMainCategory",
+                columns: new[] { "ProductMainCategoryID", "Avatar", "Code", "CreateBy", "CreateTime", "Description", "Position", "Status", "Thumb", "Title" },
+                values: new object[,]
+                {
+                    { 1, null, "1", null, new DateTime(2020, 12, 17, 12, 51, 55, 667, DateTimeKind.Local).AddTicks(9811), "Danh mục áo", 1, true, null, "Áo" },
+                    { 2, null, "2", null, new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(562), "Danh mục quần", 2, true, null, "Quần" },
+                    { 3, null, "3", null, new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(618), "Danh mục giày", 3, true, null, "Giày" },
+                    { 4, null, "4", null, new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(621), "Danh mục phụ kiện", 4, true, null, "Phụ kiện" },
+                    { 5, null, "5", null, new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(622), "Danh mục bộ sưu tập", 5, true, null, "Collection" }
+                });
+
             migrationBuilder.CreateIndex(
-                name: "IX_Accounts_AccountCategoryID",
-                table: "Accounts",
+                name: "IX_Account_AccountCategoryID",
+                table: "Account",
                 column: "AccountCategoryID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ArticleCategories_ArticleMainCategoryID",
-                table: "ArticleCategories",
-                column: "ArticleMainCategoryID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Articles_ArticleCategoryID",
-                table: "Articles",
+                name: "IX_Article_ArticleCategoryID",
+                table: "Article",
                 column: "ArticleCategoryID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Contacts_ContactCategoryID",
-                table: "Contacts",
+                name: "IX_ArticleCategory_ArticleMainCategoryID",
+                table: "ArticleCategory",
+                column: "ArticleMainCategoryID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Contact_ContactCategoryID",
+                table: "Contact",
                 column: "ContactCategoryID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductCategories_ProductMainCategoryID",
-                table: "ProductCategories",
-                column: "ProductMainCategoryID");
+                name: "IX_Product_ProductCategoryID",
+                table: "Product",
+                column: "ProductCategoryID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_ProductCategoryID",
-                table: "Products",
-                column: "ProductCategoryID");
+                name: "IX_ProductCategory_ProductMainCategoryID",
+                table: "ProductCategory",
+                column: "ProductMainCategoryID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Accounts");
+                name: "Account");
 
             migrationBuilder.DropTable(
-                name: "Articles");
+                name: "Article");
 
             migrationBuilder.DropTable(
-                name: "Contacts");
+                name: "Contact");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "Product");
 
             migrationBuilder.DropTable(
-                name: "AccountCategories");
+                name: "AccountCategory");
 
             migrationBuilder.DropTable(
-                name: "ArticleCategories");
+                name: "ArticleCategory");
 
             migrationBuilder.DropTable(
-                name: "ContactCategories");
+                name: "ContactCategory");
 
             migrationBuilder.DropTable(
-                name: "ProductCategories");
+                name: "ProductCategory");
 
             migrationBuilder.DropTable(
-                name: "ArticleMainCategories");
+                name: "ArticleMainCategory");
 
             migrationBuilder.DropTable(
-                name: "ProductMainCategories");
+                name: "ProductMainCategory");
         }
     }
 }

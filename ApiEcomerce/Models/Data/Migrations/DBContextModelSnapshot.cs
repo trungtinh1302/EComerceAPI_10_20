@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Model.Model;
 
-namespace ApiEcomerce.Model.Data.Migrations
+namespace ApiEcomerce.Models.Data.Migrations
 {
     [DbContext(typeof(DBContext))]
     partial class DBContextModelSnapshot : ModelSnapshot
@@ -66,7 +66,7 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasIndex("AccountCategoryID");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("Account");
                 });
 
             modelBuilder.Entity("Model.Model.AccountCategory", b =>
@@ -96,7 +96,25 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasKey("AccountCategoryID");
 
-                    b.ToTable("AccountCategories");
+                    b.ToTable("AccountCategory");
+
+                    b.HasData(
+                        new
+                        {
+                            AccountCategoryID = 1,
+                            Description = "Tài khoản khách hàng 1",
+                            Position = 1,
+                            Status = true,
+                            Title = "Client Account 1"
+                        },
+                        new
+                        {
+                            AccountCategoryID = 2,
+                            Description = "Tài khoản khách hàng 2",
+                            Position = 1,
+                            Status = true,
+                            Title = "Client Account 2"
+                        });
                 });
 
             modelBuilder.Entity("Model.Model.Article", b =>
@@ -158,7 +176,7 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasIndex("ArticleCategoryID");
 
-                    b.ToTable("Articles");
+                    b.ToTable("Article");
                 });
 
             modelBuilder.Entity("Model.Model.ArticleCategory", b =>
@@ -202,7 +220,7 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasIndex("ArticleMainCategoryID");
 
-                    b.ToTable("ArticleCategories");
+                    b.ToTable("ArticleCategory");
                 });
 
             modelBuilder.Entity("Model.Model.ArticleMainCategory", b =>
@@ -241,7 +259,7 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasKey("ArticleMainCategoryID");
 
-                    b.ToTable("ArticleMainCategories");
+                    b.ToTable("ArticleMainCategory");
                 });
 
             modelBuilder.Entity("Model.Model.Contact", b =>
@@ -288,7 +306,7 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasIndex("ContactCategoryID");
 
-                    b.ToTable("Contacts");
+                    b.ToTable("Contact");
                 });
 
             modelBuilder.Entity("Model.Model.ContactCategory", b =>
@@ -327,7 +345,7 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasKey("ContactCategoryID");
 
-                    b.ToTable("ContactCategories");
+                    b.ToTable("ContactCategory");
                 });
 
             modelBuilder.Entity("Model.Model.Product", b =>
@@ -416,7 +434,7 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasIndex("ProductCategoryID");
 
-                    b.ToTable("Products");
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("Model.Model.ProductCategory", b =>
@@ -460,7 +478,7 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasIndex("ProductMainCategoryID");
 
-                    b.ToTable("ProductCategories");
+                    b.ToTable("ProductCategory");
                 });
 
             modelBuilder.Entity("Model.Model.ProductMainCategory", b =>
@@ -499,7 +517,59 @@ namespace ApiEcomerce.Model.Data.Migrations
 
                     b.HasKey("ProductMainCategoryID");
 
-                    b.ToTable("ProductMainCategories");
+                    b.ToTable("ProductMainCategory");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductMainCategoryID = 1,
+                            Code = "1",
+                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 667, DateTimeKind.Local).AddTicks(9811),
+                            Description = "Danh mục áo",
+                            Position = 1,
+                            Status = true,
+                            Title = "Áo"
+                        },
+                        new
+                        {
+                            ProductMainCategoryID = 2,
+                            Code = "2",
+                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(562),
+                            Description = "Danh mục quần",
+                            Position = 2,
+                            Status = true,
+                            Title = "Quần"
+                        },
+                        new
+                        {
+                            ProductMainCategoryID = 3,
+                            Code = "3",
+                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(618),
+                            Description = "Danh mục giày",
+                            Position = 3,
+                            Status = true,
+                            Title = "Giày"
+                        },
+                        new
+                        {
+                            ProductMainCategoryID = 4,
+                            Code = "4",
+                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(621),
+                            Description = "Danh mục phụ kiện",
+                            Position = 4,
+                            Status = true,
+                            Title = "Phụ kiện"
+                        },
+                        new
+                        {
+                            ProductMainCategoryID = 5,
+                            Code = "5",
+                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(622),
+                            Description = "Danh mục bộ sưu tập",
+                            Position = 5,
+                            Status = true,
+                            Title = "Collection"
+                        });
                 });
 
             modelBuilder.Entity("Model.Model.Account", b =>
