@@ -22,6 +22,6 @@ namespace Model.Model
         public DateTime CreateTime { get; set; }
         [ForeignKey("AccountCategoryID")]
         public int AccountCategoryID { get; set; }
-        public AccountCategory AccountCategories { get; set; }
+        public AccountCategory AccountCategories { get; set; }      
     }
 }

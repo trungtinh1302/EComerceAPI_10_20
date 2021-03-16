@@ -479,6 +479,96 @@ namespace ApiEcomerce.Models.Data.Migrations
                     b.HasIndex("ProductMainCategoryID");
 
                     b.ToTable("ProductCategory");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductCategoryID = 1,
+                            Code = "",
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 357, DateTimeKind.Local).AddTicks(5707),
+                            Description = "Danh mục áo thun",
+                            Position = 1,
+                            ProductMainCategoryID = 1,
+                            Status = true,
+                            Title = "Áo thun"
+                        },
+                        new
+                        {
+                            ProductCategoryID = 2,
+                            Code = "",
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 358, DateTimeKind.Local).AddTicks(5839),
+                            Description = "Danh mục áo thun",
+                            Position = 2,
+                            ProductMainCategoryID = 1,
+                            Status = true,
+                            Title = "Áo Sơmi"
+                        },
+                        new
+                        {
+                            ProductCategoryID = 3,
+                            Code = "",
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 358, DateTimeKind.Local).AddTicks(5872),
+                            Description = "Danh mục áo thun",
+                            Position = 1,
+                            ProductMainCategoryID = 3,
+                            Status = true,
+                            Title = "Áo Khoác"
+                        },
+                        new
+                        {
+                            ProductCategoryID = 4,
+                            Code = "",
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 358, DateTimeKind.Local).AddTicks(5875),
+                            Description = "Danh mục quần jean",
+                            Position = 4,
+                            ProductMainCategoryID = 2,
+                            Status = true,
+                            Title = "Quần Jean"
+                        },
+                        new
+                        {
+                            ProductCategoryID = 5,
+                            Code = "",
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 358, DateTimeKind.Local).AddTicks(5877),
+                            Description = "Danh mục quần kaki",
+                            Position = 5,
+                            ProductMainCategoryID = 2,
+                            Status = true,
+                            Title = "Quần Kaki"
+                        },
+                        new
+                        {
+                            ProductCategoryID = 6,
+                            Code = "",
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 358, DateTimeKind.Local).AddTicks(5879),
+                            Description = "Danh mục quần Jogger",
+                            Position = 6,
+                            ProductMainCategoryID = 2,
+                            Status = true,
+                            Title = "Quần Jogger"
+                        },
+                        new
+                        {
+                            ProductCategoryID = 7,
+                            Code = "",
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 358, DateTimeKind.Local).AddTicks(5881),
+                            Description = "Danh mục quần tây",
+                            Position = 7,
+                            ProductMainCategoryID = 2,
+                            Status = true,
+                            Title = "Quần Tây"
+                        },
+                        new
+                        {
+                            ProductCategoryID = 8,
+                            Code = "",
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 358, DateTimeKind.Local).AddTicks(5883),
+                            Description = "Danh mục quần short",
+                            Position = 7,
+                            ProductMainCategoryID = 2,
+                            Status = true,
+                            Title = "Quần Short"
+                        });
                 });
 
             modelBuilder.Entity("Model.Model.ProductMainCategory", b =>
@@ -524,7 +614,7 @@ namespace ApiEcomerce.Models.Data.Migrations
                         {
                             ProductMainCategoryID = 1,
                             Code = "1",
-                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 667, DateTimeKind.Local).AddTicks(9811),
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 359, DateTimeKind.Local).AddTicks(2701),
                             Description = "Danh mục áo",
                             Position = 1,
                             Status = true,
@@ -534,7 +624,7 @@ namespace ApiEcomerce.Models.Data.Migrations
                         {
                             ProductMainCategoryID = 2,
                             Code = "2",
-                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(562),
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 359, DateTimeKind.Local).AddTicks(4721),
                             Description = "Danh mục quần",
                             Position = 2,
                             Status = true,
@@ -544,7 +634,7 @@ namespace ApiEcomerce.Models.Data.Migrations
                         {
                             ProductMainCategoryID = 3,
                             Code = "3",
-                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(618),
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 359, DateTimeKind.Local).AddTicks(4774),
                             Description = "Danh mục giày",
                             Position = 3,
                             Status = true,
@@ -554,7 +644,7 @@ namespace ApiEcomerce.Models.Data.Migrations
                         {
                             ProductMainCategoryID = 4,
                             Code = "4",
-                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(621),
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 359, DateTimeKind.Local).AddTicks(4777),
                             Description = "Danh mục phụ kiện",
                             Position = 4,
                             Status = true,
@@ -564,7 +654,7 @@ namespace ApiEcomerce.Models.Data.Migrations
                         {
                             ProductMainCategoryID = 5,
                             Code = "5",
-                            CreateTime = new DateTime(2020, 12, 17, 12, 51, 55, 669, DateTimeKind.Local).AddTicks(622),
+                            CreateTime = new DateTime(2020, 12, 26, 12, 24, 7, 359, DateTimeKind.Local).AddTicks(4779),
                             Description = "Danh mục bộ sưu tập",
                             Position = 5,
                             Status = true,

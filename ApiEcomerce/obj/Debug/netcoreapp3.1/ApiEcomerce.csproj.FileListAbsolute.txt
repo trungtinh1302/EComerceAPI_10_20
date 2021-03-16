@@ -5,7 +5,6 @@ F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\obj\Debug\netcorea
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\obj\Debug\netcoreapp3.1\ApiEcomerce.MvcApplicationPartsAssemblyInfo.cache
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\bin\Debug\netcoreapp3.1\appsettings.Development.json
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\bin\Debug\netcoreapp3.1\appsettings.json
-F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\bin\Debug\netcoreapp3.1\ApiEcomerce.exe
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\bin\Debug\netcoreapp3.1\ApiEcomerce.deps.json
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\bin\Debug\netcoreapp3.1\ApiEcomerce.runtimeconfig.json
@@ -63,3 +62,4 @@ F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\obj\Debug\netcorea
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\obj\Debug\netcoreapp3.1\ApiEcomerce.dll
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\obj\Debug\netcoreapp3.1\ApiEcomerce.pdb
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\obj\Debug\netcoreapp3.1\ApiEcomerce.genruntimeconfig.cache
+F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\ApiEcomerce\obj\Debug\netcoreapp3.1\scopedcss\bundle\ApiEcomerce.styles.css

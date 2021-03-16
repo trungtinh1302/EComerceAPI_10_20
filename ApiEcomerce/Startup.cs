@@ -1,16 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Model.Model;
 
 namespace ApiEcomerce
@@ -27,8 +20,13 @@ namespace ApiEcomerce
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication().AddJwtBearer("Bearer", config =>
+            {
+                config.Authority = "https://localhost:44316/";
+                config.Audience = "ApiIdentityServerSecure";
+            });
             services.AddControllers();
-            services.AddDbContext<DBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DeveloperDatabase")),ServiceLifetime.Scoped);
+            services.AddDbContext<DBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DeveloperDatabase")), ServiceLifetime.Scoped);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +41,9 @@ namespace ApiEcomerce
 
             app.UseRouting();
 
+            app.UseAuthorization();
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

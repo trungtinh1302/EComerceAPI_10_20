@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "TfH5AQNbm9gaE3dt30NV5iAdK9WjxOqkx95zb/6YnrUylh/+3rvSvY6Z64ZiL1jdB1O8pcDwqhiYNQy3hj1r3Q==",
+  "dgSpecHash": "HFAssIDpsidl/FavUE2ax8YI2rJ69t6FtzLb9gpfwm0WkSat6VHO0XimK2CFLD/q2xEXDrQUsREwBETIzVI1BA==",
   "success": true,
   "projectFilePath": "F:\\MyProject_2020\\Backend_Project\\Api\\ApiEcomerce\\ApiEcomerce\\ApiEcomerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\buitr\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\buitr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\buitr\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.0.0\\microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
     "C:\\Users\\buitr\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\buitr\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\buitr\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

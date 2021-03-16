@@ -6,3 +6,4 @@ F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\Model\obj\Debug\netstandard2.0
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\Model\obj\Debug\netstandard2.0\Model.csproj.CoreCompileInputs.cache
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\Model\obj\Debug\netstandard2.0\Model.dll
 F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\Model\obj\Debug\netstandard2.0\Model.pdb
+F:\MyProject_2020\Backend_Project\Api\ApiEcomerce\Model\obj\Debug\netstandard2.0\Model.csprojAssemblyReference.cache
